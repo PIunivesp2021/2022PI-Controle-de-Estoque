@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque | PI</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif ;
+            background-image: linear-gradient(to right, rgb(20,147,220), rgb(17,54,71)) ;
+        }
+        .box {
+            color: white ;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 25%;
+        }
+        fieldset{
+            border: 3px solid dodgerblue;
+        
+        }
+        legend{
+            border: 1px solid dodgerblue;
+            padding: 10px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 8px;
+        }
+
+        .inputBox{
+            position: relative;
+        }
+
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline:white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 10px;
+            color: white ;
+        }
+
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .inputUser:focus ~.labelInput,
+        .inputUser:valid ~.labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+
+        #data_de_envio{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+        }
+        #submit{
+            background-image: linear-gradient(to right, rgb(0,92,197), rgb(90,20,220));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #subimit:hover{
+            background-image: linear-gradient(to right, rgb(0,80,172), rgb(80,19,195)) ;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>CADASTRO</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="empenho" id="empenho" class="inputUser" required>
+                    <label for="empenho" class="labelInput">Empenho</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="nota" id="nota" class="inputUser" required>
+                    <label for="nota" class="labelInput">Nota Fiscal</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="material" id="material" class="inputUser" required>
+                    <label for="material" class="labelInput">Material</label>
+                </div>
+                <br>
+               <p>Tamanho:</p>
+               <input type="radio" id="P" name="tamanho" value="P" required>
+               <label for="P">P</label>
+               <br>
+               <input type="radio" id="M" name="tamanho" value="M" required>
+               <label for="M">M</label>
+               <br>
+               <input type="radio" id="G" name="tamanho" value="G" required>
+               <label for="G">G</label>
+               <br>
+               <input type="radio" id="G" name="tamanho" value="G" required>
+               <label for="G">GG</label>
+               <br>
+               <input type="radio" id="G" name="tamanho" value="G" required>
+               <label for="G">Outro</label> <input type="text" name="obs" id="obs" class="inputUser" required>
+               <br>
+               <label for="obs"></label>
+               <div class="inputBox">
+               <br><br>
+                <label for="data_de_envio"><b>Data de Envio:</b></label>
+                <input type="date" name="data_de_envio" id="data_de_envio" required>
+                <br><br>
+             <div class="inputBox">
+                <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                <label for="cidade" class="labelInput">Cidade</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="text" name="estado" id="estado" class="inputUser" required>
+                <label for="estado" class="labelInput">Estado</label>
+            </div>
+            <br><br>
+            <input type ="submit" name="submit" id ="submit" >
+           
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
